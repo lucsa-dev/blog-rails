@@ -1,4 +1,4 @@
-<%= unless comment.archived? %>
+<% unless comment.archived? %>
   <p>
     <strong>Commenter:</strong>
     <%= comment.commenter %>
@@ -11,8 +11,8 @@
 
   <p>
     <%= link_to "Destroy Comment", [comment.article, comment], data: {
-      turbo_config: delete,
+      turbo_config: :delete,
       turbo_confirm: "Are you sure?"
     } %>
   </p>
-<%= end %>
+<% end %>
